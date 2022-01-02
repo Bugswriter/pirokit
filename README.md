@@ -1,6 +1,6 @@
 # Pirokit
 
-This script is used to web scrape a very popular torrent site 1337x.to to search torrents using bash, and you can represent scrapped torrent data in fzf / dmenu / rofi sort of like menu to select which torrent to download. 
+This script is used to web scrape a very popular torrent site 1337x.wtf to search torrents using bash, and you can represent scrapped torrent data in fzf / dmenu / rofi sort of like menu to select which torrent to download.
 
 ## Installation
 

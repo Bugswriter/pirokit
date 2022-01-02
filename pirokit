@@ -8,12 +8,12 @@ else
   query=$1
 fi
 
-baseurl="https://1337x.to"
+baseurl="https://1337x.wtf"
 cachedir="$HOME/.cache/pirokit"
 query="$(sed 's/ /+/g' <<<$query)"
 
-#curl -s https://1337x.to/category-search/$query/Movies/1/ > $cachedir/tmp.html
-curl -s https://1337x.to/search/$query/1/ > $cachedir/tmp.html
+#curl -s https://1337x.wtf/category-search/$query/Movies/1/ > $cachedir/tmp.html
+curl -s https://1337x.wtf/search/$query/1/ > $cachedir/tmp.html
 
 # Get Titles
 grep -o '<a href="/torrent/.*</a>' $cachedir/tmp.html |
@@ -60,7 +60,7 @@ fullURL="${baseurl}${url}/"
 
 # Requesting page for magnet link
 curl -s $fullURL > $cachedir/tmp.html
-magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head -n 1) 
+magnet=$(grep -Po "magnet:\?xt=urn:btih:[a-zA-Z0-9]*" $cachedir/tmp.html | head -n 1)
 
 deluge-console add "$magnet"
 
