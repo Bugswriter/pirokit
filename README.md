@@ -2,6 +2,10 @@
 
 This script is used to web scrape a very popular torrent site 1337x.to to search torrents using bash, and you can represent scrapped torrent data in fzf / dmenu / rofi sort of like menu to select which torrent to download. 
 
+## Prerequisite
+
+* deluge-console
+
 ## Installation
 
 Place this script where you keep your scripts.
