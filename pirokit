@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+if ! command -v deluge-console &> /dev/null
+then
+    printf "\"deluge-console\" could not be found\nInstall it first\n"
+    exit
+fi
+
 mkdir -p $HOME/.cache/pirokit
 
 if [ -z $1 ]; then
